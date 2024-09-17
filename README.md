@@ -1,5 +1,7 @@
 # การทำ Load Balancing ด้วย Docker, Nginx และ Go
 
+![Nginx Load Balancing Architecture](images/images.png)
+
 โปรเจ็กต์นี้แสดงตัวอย่างวิธีการทำ Load Balancing โดยใช้ Docker, Docker Compose, Nginx และแอปพลิเคชัน Go อย่างง่าย โดย Nginx ทำหน้าที่เป็น reverse proxy เพื่อลดภาระการทำงานให้กับสอง container ของแอปพลิเคชัน Go (`app1` และ `app2`)
 
 ## โครงสร้างของโปรเจ็กต์
@@ -17,8 +19,8 @@
 ### 1. Clone โปรเจ็กต์จาก GitHub
 
 ```bash
-git clone https://github.com/your-username/docker-load-balancer.git
-cd docker-load-balancer
+git clone https://github.com/BasZ4ll/load-balance
+cd load-balance
 
 1. การตั้งค่า Nginx
 ไฟล์คอนฟิกของ Nginx กำหนดการตั้งค่า Load Balancing โดยจะส่งต่อ request ไปยัง app1 หรือ app2 ตามการตั้งค่าแบบ round-robin
