@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app1:
+    build: ./app
+    container_name: app1
+    expose:
+      - "3000"
+
+  app2:
+    build: ./app
+    container_name: app2
+    expose:
+      - "3000"
+
+  app3:
+    build: ./app
+    container_name: app3
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app1
+      - app2
+      - app3
