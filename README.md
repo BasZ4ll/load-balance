@@ -1,6 +1,6 @@
 # การทำ Load Balancing ด้วย Docker, Nginx และ Go
 
-![Nginx Load Balancing Architecture](images/images.png)
+![Nginx Load Balancing Architecture](images/images1.png)
 
 โปรเจ็กต์นี้แสดงตัวอย่างวิธีการทำ Load Balancing โดยใช้ Docker, Docker Compose, Nginx และแอปพลิเคชัน Go อย่างง่าย โดย Nginx ทำหน้าที่เป็น reverse proxy เพื่อลดภาระการทำงานให้กับสอง container ของแอปพลิเคชัน Go (`app1` และ `app2`)
 
